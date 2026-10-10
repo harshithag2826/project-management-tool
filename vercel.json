@@ -1,16 +1,3 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "client/dist",
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ],
-  "crons": [
-    {
-      "path": "/api/cron/reminders",
-      "schedule": "0 * * * *"
-    }
-  ]
+  "$schema": "https://openapi.vercel.sh/vercel.json"
 }
