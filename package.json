@@ -1,0 +1,24 @@
+{
+  "name": "teamboard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Collaborative project management with Kanban boards",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently -n api,web -c blue,green \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:server": "npm run dev --workspace server",
+    "dev:client": "npm run dev --workspace client",
+    "build": "npm run build --workspace client",
+    "test": "npm test --workspace server",
+    "start": "npm run start --workspace server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "overrides": {
+    "shell-quote": "^1.12.0"
+  }
+}
